@@ -30,6 +30,10 @@ typedef struct
 
 	float speed;
 
+	uint16_t UTC_Year;
+	uint8_t UTC_Month;
+	uint8_t UTC_Day;
+
 }GPS_data_frame;
 
 

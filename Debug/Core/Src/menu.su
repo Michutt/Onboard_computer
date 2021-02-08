@@ -1,5 +1,9 @@
-menu.c:24:6:menu_sw_next	4	static
-menu.c:29:6:menu_sw_previous	4	static
-menu.c:34:6:menu_sw_child	4	static
-menu.c:40:6:menu_sw_parent	4	static
-menu.c:46:13:display_time	16	static
+menu.c:23:6:menu_sw_next	4	static
+menu.c:28:6:menu_sw_previous	4	static
+menu.c:33:6:menu_sw_child	4	static
+menu.c:39:6:menu_sw_parent	4	static
+menu.c:45:13:display_time	16	static
+menu.c:52:13:display_date	16	static
+menu.c:59:13:display_latitude	32	static
+menu.c:66:13:display_longitude	32	static
+menu.c:73:13:display_speed	16	static

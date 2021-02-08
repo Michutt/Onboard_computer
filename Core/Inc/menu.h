@@ -37,5 +37,9 @@ void menu_sw_child(void);
 void menu_sw_parent(void);
 
 const char *display_time(void);
+const char *display_date(void);
+const char *display_latitude(void);
+const char *display_longitude(void);
+const char *display_speed(void);
 
 #endif /* INC_MENU_H_ */

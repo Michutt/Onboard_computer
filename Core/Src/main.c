@@ -212,9 +212,10 @@ void release_button(uint16_t GPIO_Pin, uint8_t *state)
 
 void screen_refresh(void)
 {
-	if (data_display && (sec_status == GPS_data.UTC_Sec))
+	if (data_display && (sec_status != GPS_data.UTC_Sec))
 	{
-		menu_show("***** ***", hi2c1);
+		sec_status = GPS_data.UTC_Sec;
+		menu_show(current_menu->menu_f(), hi2c1);
 	}
 }
 
@@ -258,7 +259,7 @@ void button_check(void)
 	if(!button_state[2] && !HAL_GPIO_ReadPin(GPIOA, button_next_Pin))
 	{
 		button_state[2] = 1;
-		if(debounce_button(button_next_Pin))
+		if(debounce_button(button_next_Pin) && !data_display)
 		{
 			menu_sw_next();
 			menu_show(current_menu->name, hi2c1);
@@ -267,7 +268,7 @@ void button_check(void)
 	if(!button_state[3] && !HAL_GPIO_ReadPin(GPIOA, button_previous_Pin))
 	{
 		button_state[3] = 1;
-		if(debounce_button(button_previous_Pin))
+		if(debounce_button(button_previous_Pin) && !data_display)
 		{
 			menu_sw_previous();
 			menu_show(current_menu->name, hi2c1);
