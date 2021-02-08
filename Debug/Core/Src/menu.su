@@ -1,0 +1,5 @@
+menu.c:24:6:menu_sw_next	4	static
+menu.c:29:6:menu_sw_previous	4	static
+menu.c:34:6:menu_sw_child	4	static
+menu.c:40:6:menu_sw_parent	4	static
+menu.c:46:13:display_time	16	static
